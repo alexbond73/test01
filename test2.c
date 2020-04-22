@@ -22,6 +22,8 @@ int main() {
   /* for(i = 0; i < ctr; i++) {
      arr[i] = 'i';
     } */
-  } 
+  }
+ 
+while(TRUE){}
 free(arr);
 }
