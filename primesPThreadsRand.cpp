@@ -21,6 +21,7 @@ void* findPrime(void *threadarg)
 	    int minLimit =  this_range -> min ;
 	    int maxLimit =  this_range -> max ;
             int flag = false;
+	    if(minLimit % 2 == 0) minLimit++;
 	    while (minLimit <= maxLimit) {
 	            i = 2;
 	            int lim = ceil(sqrt(minLimit));
@@ -35,7 +36,7 @@ void* findPrime(void *threadarg)
 	                primes++;
 	            }
 	            flag = false;
-	            minLimit++;
+	            minLimit += 2;
 	        }
 	        this_range ->total = primes;
 	    pthread_exit(NULL);
